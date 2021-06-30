@@ -1,0 +1,27 @@
+#include<bits/stdc++.h>
+using namespace std;
+ 
+int swap(int a[100000],int s,int e) {
+     int temp;
+     temp=a[s];
+     a[s]=a[e];
+     a[e]=temp;
+    }
+    
+int main(){
+    int x,i; 
+    cin>>x;
+    int a[x];
+    for(i=0;i<x;i++){
+        cin>>a[i];
+    }
+    int start=0, end=x-1;
+    while(start<end){
+        swap(a,start,end);
+        start++;
+        end--;
+    }
+    for(i=0;i<x;i++)
+     cout<<a[i];
+}    
+    
